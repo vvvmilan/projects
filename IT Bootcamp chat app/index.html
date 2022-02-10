@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat app - Milan Videnović (IT Bootcamp: JS + React)</title>
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link href="bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="vh-100" id="wrapper">
+        <div id="userUpdated" class="hidden">
+        </div>
+        <div class="sticky-top">
+            <div id="headers">
+                <img src="img/itb_logo.png" alt="IT Bootcamp logo">
+                <h1>chat app</h1>
+                <div id="filterFlex">
+                    <h3>please choose a chatroom</h3>
+                    <div class="dropdown">
+                        <button id="btnOptions" class="btn btn-secondary dropdown-toggle btnMobile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-funnel"></i>
+                        </button>
+                        <div id="divOptions" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <form action="" id="formFilter">
+                                <label for="inputStartDate">start date:</label>
+                                <input type="datetime-local" name="" id="inputStartDateM">
+                                <label for="inputStartDate">end date:</label>
+                                <input type="datetime-local" name="" id="inputEndDateM">
+                                <input class="btn" id="btnFilterM" type="submit" value="filter messages">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="navigation">
+                <ul id="ulNav">
+                    <li id="general"><i class="bi bi-chat-text"></i> general</li>
+                    <li id="js"><i class="bi bi-filetype-js"></i> js</li>
+                    <li id="homeworks"><i class="bi bi-house-door"></i> homeworks</li>
+                    <li id="tests"><i class="bi bi-journal-code"></i> tests</li>
+                    <div class="dropdown">
+                        <button id="btnOptions" class="btn btn-secondary dropdown-toggle btnOptionsWeb" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-funnel"></i>
+                        </button>
+                        <div id="divOptions" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <form action="" id="formFilter">
+                                <label for="inputStartDate">start date:</label>
+                                <input type="datetime-local" name="" id="inputStartDateW">
+                                <label for="inputStartDate">end date:</label>
+                                <input type="datetime-local" name="" id="inputEndDateW">
+                                <input class="btn" id="btnFilterW" type="submit" value="filter messages">
+                            </form>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="messageBox">
+        </div>
+        <div id="bottom">
+            <div id="inputs">
+                <div class="userMessage">
+                    <form action="" id="formMsg">
+                        <div>
+                            <p id="currentUser">:</p>
+                        </div>
+                        <textarea  name="message" id="message" placeholder="Your message..." cols="30" rows="1"></textarea>
+                        <input class="btn btnUserAction" id="btnSend" type="submit" value="send">
+                    </form>
+                </div>
+
+                <div id="divUserOptions">
+                    <form action="" id="colorPicker">
+                        <label class="colorHidden">Chat color:</label>
+                        <input type="color" name="" id="color" value="#f4f4f5">
+                    </form>
+                    <form id="formUsername">
+                        <input type="text" name="username" id="username" placeholder="Update your username">
+                        <input class="btn btnUserAction" id="btnUpdate" type="submit" value="update">
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <footer class="py-3 my-4">
+                    <ul class="nav justify-content-center border-bottom mb-3">
+                        <li class="nav-item"><a href="https://www.linkedin.com/in/milanexpo/" class="nav-link px-2 text-muted"><i class="bi bi-linkedin"></i> Milan Videnović</a></li>
+                        <li class="nav-item"><a href="https://github.com/vvvmilan" class="nav-link px-2 text-muted"><i class="bi bi-github"></i> vvvmilan</a></li>
+                        <li class="nav-item"><a href="mailto:milan@expostudio.rs"  class="nav-link px-2 text-muted"><i class="bi bi-envelope-fill"></i> milan@expostudio.rs</a></li>
+                    </ul>
+                    <p class="text-center text-muted">&copy; Milan Videnović - IT Bootcamp (JS + React) 2022. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDPqP6dFNZojT-dfKErG64jM9s2zBpl3pk",
+            authDomain: "itbootcamp-vvvmilan.firebaseapp.com",
+            projectId: "itbootcamp-vvvmilan",
+            storageBucket: "itbootcamp-vvvmilan.appspot.com",
+            messagingSenderId: "416874888404",
+            appId: "1:416874888404:web:5ad2c522071203139b4f41",
+            measurementId: "G-TVN73950G2"
+        };
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+    </script>
+    <script src="bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

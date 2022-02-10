@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f4f4f5;
+    width: 100%;
+    height: 100%
+}
+i {
+    cursor: pointer;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 20px 1px #bababa;
+}
+
+.container {
+    align-self: flex-end;
+}
+
+#headers {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    margin: 0 0 20px 0;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+}
+
+footer ul li a:hover {
+    color: #ff9803 !important;
+}
+.py-3, .my-4 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#ulNav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+#navigation li {
+    background-color: #e7e7e7;
+    width: 25%;
+    text-align: center;
+    margin: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    vertical-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+#navigation li:hover {
+    font-weight: 600;
+}
+#inputs .btn:hover {
+    background-color: #e4f0ff;
+    color: #000;
+}
+
+#btnOptions {
+    width: 40px;
+    margin: 5px;
+    color: #ff9803;
+    font-weight: bold;
+    background-color: #fff;
+}
+.btnMobile {
+    display: none;
+}
+
+#messageBox {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 10px 10px;
+    overflow-y: auto;
+}
+.btn {
+    padding: 7px;
+    width: 150px;
+    font-weight: 600;
+    background-color: #ff9803;
+    border-radius: 5px;
+    border: none;
+    font-size: 11pt;
+}
+
+#userUpdated {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 1px #bababa;
+    z-index: 1021;
+}
+
+#userUpdated p {
+    margin: 20px 0;
+}
+
+#userUpdated p span {
+    font-weight: 700;
+}
+
+.divMsg {
+    flex: auto;
+    padding: 5px;
+    background-color: #e4f0ff;/*#d2ffad;*/
+    border-radius: 15px 15px 15px 0;
+    margin: 5px 0;
+    min-width: 30%;
+}
+.recieved {
+    flex: auto;
+    align-self: flex-start;
+}
+.userMe {
+    align-self: flex-end;
+    border-radius: 15px 15px 0 15px;
+    text-align: right;
+}
+.userMe .pTime {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.pUser, .pMessage, .pTime {
+    padding: 3px;
+}
+.pUser {
+    font-weight:600;
+}
+.pMessage {
+    margin-left: 10px;
+}
+.pTime {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    font-size: 10pt;
+    color: #a0a0a0;
+    width: 100%;
+}
+
+.btn, li a {
+    font-size: 11pt;
+}
+
+#formFilter {
+    display: flex;
+    flex-direction: column;
+}
+#btnFilterM, #btnFilterW {
+    margin: 5px 0;
+}
+
+#divOptions {
+    padding: 10px;
+}
+#inputStartDate, #inputEndDate {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#formMsg {
+    display: flex;
+    /*flex-direction: row;*/
+    width: 100%;
+    margin-bottom: 10px;
+}
+#divUserOptions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#currentUser{
+    margin-right: 5px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 5px;
+    white-space: nowrap;
+    /*height: 40px;*/
+}
+#message, #username {
+    border-radius: 8px;
+    height: 40px;
+    padding: 7px;
+    border: 1px solid #787878;
+    flex: auto;
+    width: 100%;
+    min-width: 0;
+}
+
+#btnSend, #btnUpdate {
+    width: 130px;
+    height: 40px;
+    margin: 0 5px;
+    min-width: 130px;
+}
+#colorPicker {
+    width: 150px;
+}
+#color {
+    height: 40px;
+    cursor: pointer;
+}
+
+#formUsername {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    #navigation ul {
+        flex-direction: column;
+    }
+
+    #navigation li {
+        margin: 2px 0;
+    }
+
+    #navigation li, .btn, .divMsg, #textarea, #userUpdated {
+        width: 100%;
+    }
+
+    .btnOptionsWeb, .colorHidden {
+        display: none;
+    }
+    #filterFlex {
+        position: relative;
+    }
+    .dropdown {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+    }
+
+
+    .btnMobile {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    #divUserOptions {
+        justify-content: space-between;
+        align-items: center;
+    }
+    #colorPicker {
+        width: 70px;
+    }
+
+    #userUpdated {
+        margin-bottom: 80px;
+        bottom: 30%;
+    }
+    #btnSend, #btnUpdate {
+        min-width: 100px;
+    }
+    img {
+        width: 60%;
+    }
+}
+@media (max-width: 480px) {
+    img {
+        width: 100%;
+    }
+    footer ul li {
+        width: 100%;
+        text-align: center;
+    }
+    #formMsg, #divUserOptions, #formUsername {
+        flex-direction: column;
+    }
+    #btnSend, #btnUpdate, #colorPicker, #color, #formUsername {
+        width: 100%;
+    }
+    #btnSend, #btnUpdate {
+        margin: 5px 0;
+    }
+}
