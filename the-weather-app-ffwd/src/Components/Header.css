@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 5vh;
+    background-color: #ad1c23;
+}
+
+h3 {
+    color: #fff;
+    margin: 10px;
+}

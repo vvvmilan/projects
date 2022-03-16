@@ -1,0 +1,28 @@
+.divBtns {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 100px;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: none;
+}
+
+.btn .hornet,
+.btn .xtown {
+    /*position: absolute;*/
+    /*transform: translate(-50%, -50%);*/
+}
+
+.xtown:hover {
+    background-color: gray;
+}
+
+.hornet:hover {
+    background-color: orange;
+}

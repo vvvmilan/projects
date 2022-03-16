@@ -1,0 +1,12 @@
+.searchbar {
+    border-radius: 20px;
+    padding: 5px;
+    width: 50%;
+    border: 1px solid #ad1c23;
+    margin: 10px;
+    /*border: 1px solid #bababa;*/
+}
+
+img {
+    margin: 10px;
+}
