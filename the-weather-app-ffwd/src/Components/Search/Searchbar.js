@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import cities from "cities.json";
 import TextField from '@mui/material/TextField';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
-import { useState } from "react";
 
 import './Searchbar.css'
 
@@ -26,10 +25,10 @@ function Searchbar({
     setWeather,
     weather,
     searchbarValue,
+    setWeatherResults,
                    }) {
-
+    let filterTimeout;
     const handleChange = e => {
-        let filterTimeout;
         const searchbarValue = e.target.value;
         clearTimeout(filterTimeout);
         setSearchbarValue(searchbarValue);
@@ -46,7 +45,7 @@ function Searchbar({
 
     const handleKeyPress = e => {
         if (e.key === 'Enter') {
-            // setCurrentWeather(weather);
+            setWeatherResults(weather);
             setSearchbarValue(``);
             setWeather([])
         }

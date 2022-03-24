@@ -8,16 +8,11 @@ const Item = styled(Paper)(({ theme }) => ({
     lineHeight: '25px',
 }))
 
-function SearchResults({ weather }) {
+function ResultList({ weatherResults }) {
     return (
-        <Item elevation={1} style={{
-            backgroundColor: `#fff`,
-            marginTop: 10,
-            position: `absolute`,
-            width: `100%`,
-            zIndex: 1,}}>
+        <Item elevation={1} style={{marginTop: 10}}>
             <div>
-                {weather.map((weatherInfo, index) =>
+                {weatherResults.map((weatherInfo, index) =>
                     <ResultItem
                         key={index}
                         weather={weatherInfo}
@@ -25,7 +20,7 @@ function SearchResults({ weather }) {
                 }
             </div>
         </Item>
-    )
+    );
 }
 
-export default SearchResults;
+export default ResultList;

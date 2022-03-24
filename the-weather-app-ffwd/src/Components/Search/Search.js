@@ -3,7 +3,7 @@ import axios from 'axios';
 import Searchbar from './Searchbar'
 import SearchResults from "./SearchResults";
 
-function Search() {
+function Search({ setWeatherResults }) {
     const [ searchbarValue, setSearchbarValue ] = useState('');
     const [ filteredLocations, setFilteredLocations ] = useState([]);
     const [ weather, setWeather ] = useState([]);
@@ -43,6 +43,7 @@ function Search() {
                 setFilteredLocations={setFilteredLocations}
                 weather={weather}
                 setWeather={setWeather}
+                setWeatherResults={setWeatherResults}
             />
             <SearchResults
                 searchbarValue={searchbarValue}

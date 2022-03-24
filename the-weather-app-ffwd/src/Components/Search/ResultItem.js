@@ -39,7 +39,10 @@ const styles = {
         padding: `1px 6px`,
         borderRadius: `20px`,
         margin: `0 5px`,
-    }
+    },
+    flag: {
+        color: `#000`,
+    },
 }
 
 const ResultItem = ({ key, weather }) => {
@@ -63,20 +66,9 @@ const ResultItem = ({ key, weather }) => {
             <div>
                 <span style={styles.city}>{weather.name},</span>
                 <span style={styles.info}>{countryName}</span>
-                <span style={styles.info}>{countryEmoji}</span>
+                <span style={styles.flag}>{countryEmoji}</span>
                 <span style={styles.temp}>{ Math.round(weather.main.temp *10) /10 }	&deg;C </span>
                 <span style={styles.label}>{weather.weather[0].description}</span>
-            </div>
-
-            <div>
-                <span style={styles.label}>temperature</span>
-                <span style={styles.info}>from { Math.round(weather.main.temp_min * 10) / 10 } &deg;C to { Math.round(weather.main.temp_max * 10) / 10 } &deg;C;</span>
-                <span style={styles.label}>wind:</span>
-                <span style={styles.info}>{weather.wind.speed} m/s;</span>
-                <span style={styles.label}>clouds:</span>
-                <span style={styles.info}>{weather.clouds.all}%;</span>
-                <span style={styles.label}>pressure:</span>
-                <span style={styles.info}>{weather.main.pressure} hpa</span>
             </div>
         </div>
     )
