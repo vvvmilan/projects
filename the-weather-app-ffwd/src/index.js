@@ -1,12 +1,25 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
+import LocationForecast from "./routes/LocationForecast/LocationForecast";
+import SearchForecast from "./routes/SearchForecast/SearchForecast";
 import reportWebVitals from './reportWebVitals';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Router>
+          <Routes>
+              <Route path="/" element={<App />}>
+                  <Route index element={<SearchForecast />}/>
+                  <Route path="location" element={<LocationForecast />}/>
+              </Route>
+          </Routes>
+      </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

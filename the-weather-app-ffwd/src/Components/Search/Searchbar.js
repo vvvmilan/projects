@@ -40,7 +40,7 @@ function Searchbar({
             } else {
                 setFilteredLocations([])
             }
-        }, 1000)
+        }, 500)
     }
 
     const handleKeyPress = e => {

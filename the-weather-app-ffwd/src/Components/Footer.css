@@ -6,9 +6,8 @@
     min-height: 5vh;
     color: #fff;
     background-color: #23468b;
-    position: absolute;
     width: 100%;
-    bottom: 0;
+    /*position: relative;*/
 }
 
 ul {

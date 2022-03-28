@@ -1,3 +1,4 @@
+// import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { countries } from 'countries-list'
 
@@ -46,6 +47,7 @@ const styles = {
 }
 
 const ResultItem = ({ key, weather }) => {
+    // const navigate = useNavigate();
     const [ isHighlighted, setIsHighlighted ] = useState(false)
     const countryCode = weather.sys.country
     const country = countries[countryCode]
@@ -56,12 +58,19 @@ const ResultItem = ({ key, weather }) => {
     const handleMouseEnter = () => setIsHighlighted(true)
     const handleMouseLeave = () => setIsHighlighted(false)
 
+    // const handleNavigateToCityForecast = () => {
+    //     const { lon, lat } = weather.coord;
+    //     console.log('get city forecast', { lon, lat });
+    //     navigate(`/city?lon=${lon}&lat=${lat}&city=${weather.name}&country=${countryName}`)
+    // }
+
     return (
         <div
             key={key}
             style={styles.container(isHighlighted)}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            // onClick={handleNavigateToCityForecast}
         >
             <div>
                 <span style={styles.city}>{weather.name},</span>
