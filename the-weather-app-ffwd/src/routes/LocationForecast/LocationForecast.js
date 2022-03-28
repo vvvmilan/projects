@@ -1,18 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDroplet, faWind, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons'
 
-import { getCityDetailsForecast } from "../../Requests/Requests";
+import { getCityDetailsForecast } from "../../requests/requests";
+import Item from "../../Components/Item";
 import FiveDayForecast from "./components/FiveDayForecast";
 
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    color: theme.palette.text.secondary,
-    lineHeight: '25px',
-}))
 
 const LocationForecast = () => {
     const [ current, setCurrent ] = useState(null);
@@ -29,9 +23,8 @@ const LocationForecast = () => {
     useEffect(() => {
         getCityDetailsForecast(lat, lon)
             .then(res => {
-                console.log('current', res)
-                setCurrent(res.data.current)
-                setFiveDayForecast(res.data.daily)
+                setCurrent(res.data.current);
+                setFiveDayForecast(res.data.daily);
             })
             .catch(console.error)
     }, [])
