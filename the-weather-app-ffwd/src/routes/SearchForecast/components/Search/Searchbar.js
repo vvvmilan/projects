@@ -1,6 +1,6 @@
 import axios from "axios";
 import Box from '@mui/material/Box';
-import cities from "cities.json";
+import cities from "../../../../../node_modules/cities.json/cities";
 import TextField from '@mui/material/TextField';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 

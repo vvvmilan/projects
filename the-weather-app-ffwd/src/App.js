@@ -1,16 +1,14 @@
 import './App.css';
 import Header from "./Components/Header";
 import { Outlet } from "react-router-dom"
-import Search from "./Components/Search/Search"
+import Search from "./routes/SearchForecast/components/Search/Search"
 import Footer from "./Components/Footer";
-import ResultList from "./Components/Results/ResultList";
-import SelectedLocation from "./Components/SelectedLocation/SelectedLocation";
+import ResultList from "./routes/SearchForecast/components/Results/ResultList";
+// import SelectedLocation from "./Components/SelectedLocation/SelectedLocation";
 
 import {useState} from "react";
 
 function App() {
-    const [ weatherResults, setWeatherResults ] = useState([]);
-
     return (
     <div className="App">
         <div>

@@ -1,8 +1,15 @@
-import React from 'react';
+import Search from "./components/Search/Search";
+import React, {useState} from 'react';
+import ResultList from "./components/Results/ResultList";
 
-function SearchForecast(props) {
+function SearchForecast() {
+    const [ weatherResults, setWeatherResults ] = useState([]);
+
     return (
-        <div>SearchForecast</div>
+        <div>
+            <Search setWeatherResults={setWeatherResults}/>
+            <ResultList weatherResults={weatherResults} />
+        </div>
     );
 }
 
